@@ -9,9 +9,9 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      userInputTitle: '',
-      userInputBody: ''
+      userInput: []
     }
+    this.appendToPage = this.appendToPage.bind(this);
   }
 
   setCardState() {
@@ -19,13 +19,21 @@ class App extends Component {
       userInputTitle: {}
     })
   }
-  render() {
+
+  appendToPage(userInput) {
+    
+  }
+  render(props) {
     return (
       <div className="App">
         <h2> ideaBox </h2> 
-        <AddCard />
+        <AddCard 
+        appendToPage={this.appendToPage}
+        />
         <Search />
-        <CardList />
+        <CardList
+        
+        />
       </div>
     );
   }
