@@ -44,7 +44,7 @@ class AddCard extends Component {
         onChange={this.addBody}
         />
         <button
-        onClick={(event) => }
+        
         > Submit Idea </button> 
 
       </form> 
