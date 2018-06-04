@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 class AddCard extends Component {
-  constructor() {
+  constructor(props) {
     super()
     this.state = {
       userInputTitle: '',
@@ -19,7 +19,7 @@ class AddCard extends Component {
 
   addBody(event) {
     this.setState({
-      userInputBody: event.target.vale
+      userInputBody: event.target.value
     })
   }
 
@@ -44,7 +44,7 @@ class AddCard extends Component {
         onChange={this.addBody}
         />
         <button
-        
+          onClick={() => this.props.appendToPage(this.state.userInputBody)}
         > Submit Idea </button> 
 
       </form> 
