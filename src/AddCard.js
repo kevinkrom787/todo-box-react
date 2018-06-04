@@ -8,6 +8,7 @@ class AddCard extends Component {
       userInputBody: ''
     }
     this.addTitle = this.addTitle.bind(this);
+    this.addBody = this.addBody.bind(this);
   }
 
   addTitle(event) {
@@ -42,7 +43,9 @@ class AddCard extends Component {
         value={this.state.userInputBody}
         onChange={this.addBody}
         />
-        <button> Submit Idea </button> 
+        <button
+        
+        > Submit Idea </button> 
 
       </form> 
     )
